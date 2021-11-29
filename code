@@ -1,0 +1,16 @@
+n= int(input("Enter number of subjects"))
+s=[]
+for i in range(n):
+b= list(map(int,input().split()))
+s.append(b) 
+print("Scores: ",s) 
+def fail(s): 
+for i in s: 
+if i<35:
+return 1 
+obj=filter(fail,s) 
+answer = list(obj) 
+for i in range(0, len(s)): 
+if s[i] in answer: 
+print("Student",str(i),"failed in atleast one subject")
+
